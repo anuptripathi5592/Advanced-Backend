@@ -1,0 +1,182 @@
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #f4f6ff;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.dashboard {
+  max-width: 1180px;
+  margin: auto;
+  padding: 30px 28px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #252c40;
+}
+
+.brand {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.brand span,
+.hero-section h1 span {
+  color: #8b9dff;
+}
+
+.project-label,
+.card-label,
+.eyebrow {
+  color: #9ba6c4;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.status {
+  color: #ffbf69;
+  font-size: 12px;
+}
+
+.status.online {
+  color: #68e3b1;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.hero-section {
+  padding: 75px 0 55px;
+}
+
+.eyebrow {
+  color: #9aa8ff;
+}
+
+.hero-section h1 {
+  margin: 18px 0;
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+}
+
+.subtitle {
+  max-width: 500px;
+  color: #aab2c9;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.actions button {
+  padding: 13px 18px;
+  color: white;
+  background: #5268ed;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.actions a {
+  color: #b7c1ff;
+  text-decoration: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  padding: 24px;
+  background: #131a2d;
+  border: 1px solid #28314a;
+  border-radius: 14px;
+}
+
+.card-label {
+  font-size: 10px;
+}
+
+.card h2 {
+  font-size: 19px;
+}
+
+.card > p:not(.card-label) {
+  min-height: 24px;
+  color: #aab2c9;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 7px 10px;
+  color: #aab7ff;
+  background: #222c4a;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 55px;
+  padding-top: 20px;
+  border-top: 1px solid #252c40;
+  color: #929bb5;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 750px) {
+  .dashboard {
+    padding: 22px 18px;
+  }
+
+  .project-label {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    padding: 55px 0 35px;
+  }
+
+  .hero-section h1 {
+    letter-spacing: -2px;
+  }
+}
+
